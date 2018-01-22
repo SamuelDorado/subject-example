@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
+import { ErrorService } from './error.service';
 
 
 @NgModule({
@@ -10,9 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CommonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ErrorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
